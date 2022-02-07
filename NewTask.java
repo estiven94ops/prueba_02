@@ -64,8 +64,8 @@ public class NewTask {
 
         ConnectionFactory factory = new ConnectionFactory();
         factory.setHost("192.168.0.103");
-        factory.setUsername("radmin");
-        factory.setPassword("radmin");
+        factory.setUsername("admin");
+        factory.setPassword("admin");
         try (Connection connection = factory.newConnection();
         		
             Channel channel = connection.createChannel()) {
