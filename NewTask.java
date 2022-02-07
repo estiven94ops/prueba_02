@@ -75,7 +75,7 @@ public class NewTask {
 
 
         	
-        	try (DirectoryStream<Path> stream = Files.newDirectoryStream(Paths.get("/archivos"))) {
+        	try (DirectoryStream<Path> stream = Files.newDirectoryStream(Paths.get("/home/prueba/prueba_02/archivos"))) {
     		    for (Path file: stream) {
     		    	
     		        System.out.println(file.getFileName());
@@ -89,7 +89,7 @@ public class NewTask {
 
     		    	
     		    	try {
-    		    		archivo = new File("/archivos/"+file.getFileName());
+    		    		archivo = new File("/home/prueba/prueba_02/archivos/"+file.getFileName());
     		    		fr = new FileReader(archivo);
     		    		br = new BufferedReader(fr);
     		    		String nombre_archivo = archivo.getName();
