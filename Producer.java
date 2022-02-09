@@ -79,9 +79,9 @@ public class Producer {
     public static void main(String[] argv) throws Exception {
 
         ConnectionFactory factory = new ConnectionFactory();
-        factory.setHost("192.168.0.103");
-        factory.setUsername("radmin");
-        factory.setPassword("radmin");
+        factory.setHost("192.168.0.105");
+        factory.setUsername("admin");
+        factory.setPassword("admin");
         try (Connection connection = factory.newConnection();
         		
             Channel channel = connection.createChannel()) {
@@ -94,9 +94,9 @@ public class Producer {
             String entradaTeclado = "";
 
             @SuppressWarnings("resource")
-			Scanner entradaEscaner = new Scanner (System.in); //Creación de un objeto Scanner
+			Scanner entradaEscaner = new Scanner (System.in); //CreaciÃ³n de un objeto Scanner
 
-            entradaTeclado = entradaEscaner.nextLine (); //Invocamos un método sobre un objeto Scanner
+            entradaTeclado = entradaEscaner.nextLine (); //Invocamos un mÃ©todo sobre un objeto Scanner
             
             final File carpeta = new File(entradaTeclado);
             		 listarFicherosPorCarpeta(carpeta);
